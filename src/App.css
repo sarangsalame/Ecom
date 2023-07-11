@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap'); 
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    color: black;
+}
+option{
+    color: black;
+}
+tr{
+    margin: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.detailpage-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    padding: 20px;
+    flex-wrap: wrap;
+    
+
+}
+.detailimg-container{
+    background-color: rgba(184, 184, 184, 0.719);
+}
+.productdetail-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.detailpage-container>h3{
+    height: 50px;
+}
+.productdetail-container.details{
+height: 300px;
+}
+.detailimg-container, .productdetail-container{
+padding: 10px;
+width: 45vw;
+height: 50vh;
+/* border: 1px solid red; */
+}
+.cat-container{
+    height: 120px;
+    width: 100px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.cat-container>img{
+    width: 100px;
+}
+.cat-container>p{
+    font-size: 12px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.addprodcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    /* alignItems: 'center',
+    gap: '20px',
+    padding: '20px',
+    backgroundColor: '#f5f5f5',
+    borderRadius: '8px',
+} */
+}
+.addprodcontainer>form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.addprodcontainer>form>input{
+    width: 100%;
+    height: 30px;
+    padding-left: 5px;
+
+}
+.addprodcontainer>form button{
+    width: 200px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+.box{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ /* form: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '20px',
+        width: '100%',
+    } */
+@media (max-width:500px) {
+    .detailimg-container, .productdetail-container{
+        width: 100vw;
+    }
+    .detailimg-container>img{
+        
+        height: 70%;
+    }
 }
